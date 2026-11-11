@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10131c"><meta name="description" content="CHAT AI — ten helpful assistants in one thoughtful chat space.">
+  <title>CHAT AI — Your AI, your way</title><link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">✳</div><span>CHAT<span class="brand-accent">AI</span></span><button class="icon-btn mobile-close" id="closeSidebar" aria-label="Close menu">×</button></div>
+    <button class="new-chat" id="newChat"><span>＋</span> New chat</button>
+    <div class="section-label">YOUR ASSISTANTS</div>
+    <nav class="assistant-list" id="assistantList" aria-label="Choose an assistant"></nav>
+    <div class="recent-heading"><span class="section-label">RECENT CHATS</span><button id="clearHistory" aria-label="Clear saved chat history" title="Clear saved chat history">⌫</button></div><div class="session-list" id="sessionList"></div>
+    <div class="sidebar-bottom"><div class="tip-card"><span class="tip-icon">✦</span><div><strong>A little more you</strong><p>Pick the right mind for every moment.</p></div></div><div class="profile"><div class="avatar user-avatar">Y</div><div><strong>You</strong><small>Personal space</small></div><span class="profile-dots">···</span></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button><div class="top-assistant" id="topAssistant"></div><div class="top-actions"><span class="status-pill"><i></i> Gemini powered</span><button class="icon-btn" id="clearChat" aria-label="Clear current chat" title="Clear chat">⟲</button></div></header>
+    <section class="chat-area" id="chatArea" aria-live="polite">
+      <div class="welcome" id="welcome"><div class="welcome-orbit"><span class="orbit-dot"></span><span class="orbit-star">✳</span><span class="orbit-dot small"></span></div><p class="eyebrow">A SPACE FOR WHAT'S NEXT</p><h1 id="welcomeTitle">A good question<br>can go anywhere.</h1><p class="welcome-copy" id="welcomeCopy">I'm Master AI. Tell me what you're thinking, and we'll figure it out together.</p><div class="suggestions" id="suggestions"></div></div>
+      <div class="messages" id="messages"></div>
+    </section>
+    <div class="composer-wrap"><div class="composer" id="composer"><textarea id="messageInput" rows="1" placeholder="Ask anything…" aria-label="Message"></textarea><div class="composer-tools"><div class="voice-controls"><button class="voice-btn" id="micBtn" aria-label="Start voice input" title="Speak your message"><span class="mic-icon">●</span><span class="voice-label">Voice input</span></button><span class="voice-divider"></span><button class="voice-btn speak-toggle" id="speakToggle" aria-pressed="false" title="Speak assistant replies"><span class="speaker-icon">◖</span><span class="voice-label">Speak replies</span></button></div><button class="send-btn" id="sendBtn" aria-label="Send message" title="Send message"><span>↑</span></button></div></div><div class="composer-foot"><span id="voiceStatus">Your conversations stay in this browser.</span><span>CHAT AI may make mistakes. Check important details.</span></div></div>
+  </main>
+</div>
+<div class="mobile-scrim" id="scrim"></div><div class="toast" id="toast" role="status"></div>
+<script src="/static/app.js" defer></script>
+</body></html>
